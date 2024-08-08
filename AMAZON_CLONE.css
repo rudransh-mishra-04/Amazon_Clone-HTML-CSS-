@@ -1,86 +1,89 @@
+/* Reset and base styles */
 * {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  border: border-box;
-  /* he border-box value of the box-sizing property controls how an element's 
-  width and height are calculated in relation to its padding and border. */
+  box-sizing: border-box;
 }
-.navbar{
+
+/* Navbar styles */
+.navbar {
   height: 60px;
   background-color: #0f1111;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-.nav_logo{
-  height: 50px; /* FIRSTLY CREATE A OUTER DIV THEN MAKE ITS MEASUREMENT ABOUT THE SIZE */
-  width: 100px; /* WITHOUT CREATING THE MEASUREMENT OF THE OUTER DIV WE CAN NOT SEE THE IMAGE  */
+
+.nav_logo {
+  height: 50px;
+  width: 100px;
 }
-.logo{
+
+.logo {
   background-image: url("amazon_logo.png");
   background-size: cover;
   height: 50px;
   width: 100%;
 }
 
-.border{
-border: 1px solid transparent;  /* FIRSTLY WE WILL CREATE THE PROPERTIES ABOUT THE BORDER LIKE ITS SIZE AND 
-AND ITS SPECIFICATION */
+.border {
+  border: 1px solid transparent;
+}
 
-/* WHILE CREATING OR GIVING THE SAME SIZE OF THE BORDER THERE WILL NO ZOOM IN ON THE LOGO */
+.border:hover {
+  border: 1px solid white;
 }
-.border:hover{
-  border: 1px solid white;/* THEN WE WILL GIVE ITS FINAL TOUCHES ANOUT THE BORDER  */
+
+.add-first {
+  color: #cccccc;
+  font-size: 0.85rem;
+  margin-left: 10px;
 }
-#DD{
-  color: gray;
+
+.add-sec {
+  font-size: 1rem;
+  margin-left: 5px;
 }
-.add-first{
-color: #cccccc;
-font-size: 0.85rem;/* WE HAVE USED REM BECAUSE WHEN THE SIZE OF THE WESITE CHANGES THE SIZE OF THE FONT
-CAHNGE AUTOMATICALLY  */
-margin-left: 10px;
-}
-.add-sec{
-font-size: 1 rem;
-margin-left: 5px;
-}
-.address_icon{
+
+.address_icon {
   display: flex;
   align-items: center;
 }
 
-/* STYLING BOX OF SEARCH  */
-.nav_search{
+.nav_search {
   display: flex;
   justify-content: space-evenly;
   height: 40px;
   width: 620px;
   background-color: pink;
   border-radius: 5px;
-
+  flex-grow: 1;
+  margin: 10px;
 }
 
-.search_select{
-background-color: #f3f3f3;
-width: 50px;
-border-top-left-radius: 5px;
-border-bottom-left-radius: 5px;
-text-align: center;
-border: none;
+.search_select {
+  background-color: #f3f3f3;
+  width: 50px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  border: none;
 }
-.search_select:hover{
+
+.search_select:hover {
   color: black;
   background-color: darkgray;
 }
 
-.search_input{
+.search_input {
   width: 100%;
   font-size: 1rem;
   border: none;
 }
-.search_icon{
+
+.search_icon {
   width: 45px;
   display: flex;
   justify-content: center;
@@ -91,31 +94,32 @@ border: none;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
-.nav_search:hover{
+
+.nav_search:hover {
   border: 1px solid orange;
 }
-/* STYLING FOR SIGN IN OPTIONS  */
-span{
+
+span {
   font-size: 0.7rem;
 }
-.nav_second{
+
+.nav_second {
   font-size: 0.85rem;
   font-weight: 700;
 }
 
-/* STYLING FOR CART  */
-
-.nav_cart i{
+.nav_cart i {
   font-size: 30px;
 }
-.nav_cart{
+
+.nav_cart {
   font-size: 0.85rem;
   font-weight: 700;
   margin-right: 10px;
 }
 
-/* NOW STYLING FOR PANNEL */
-.panel{
+/* Panel styles */
+.panel {
   height: 40px;
   background-color: #222f3d;
   display: flex;
@@ -123,23 +127,25 @@ span{
   align-items: center;
   justify-content: space-between;
 }
-.panel_option p{
+
+.panel_option p {
   display: inline;
   margin-left: 10px;
 }
-.panel_option{
+
+.panel_option {
   width: 70%;
   font-size: 1rem;
 }
-.panel_deals{
+
+.panel_deals {
   margin-right: 15px;
   font-size: 1rem;
   font-weight: 500;
 }
 
-/* HERO SECTION  */
-
-.hero-section{
+/* Hero section styles */
+.hero-section {
   background-image: url("hero_image.jpg");
   height: 380px;
   background-size: cover;
@@ -148,82 +154,101 @@ span{
   align-items: end;
 }
 
-.hero_messege{
+.hero_messege {
   background-color: white;
   height: 40px;
   color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85 rem;
+  font-size: 0.85rem;
   width: 80%;
   margin: 25px;
 }
 
-/* styling for shop section  */
-
-.shop_section{
+/* Shop section styles */
+.shop_section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: #e2e7e6;
 }
 
-.box{
-/* border: 2px solid black; */
-height: 400px;
-width: 23%;
-background-color: white;
-padding: 20px 0px 15px;
-margin-top: 15px;
+.box {
+  height: 400px;
+  width: 23%;
+  background-color: white;
+  padding: 20px 0px 15px;
+  margin-top: 15px;
 }
-.box_image{
+
+.box_image {
   height: 300px;
   background-size: cover;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.box_content{
+
+.box_content {
   margin-left: 10px;
   margin-right: 10px;
 }
-.box_content p{
+
+.box_content p {
   color: #007185;
 }
-.box_content a{
+
+.box_content a {
   text-decoration: none;
 }
 
-/* STYLING FOR FOOTER */
-footer{
+footer {
   margin-top: 15px;
 }
-.foot_panel1{
+
+.foot_panel1 {
   background-color: #37475a;
   color: white;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.85 rem;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  /* Added margin */
 }
-.foot_panel2{
+
+.foot_panel2 {
   background-color: #222f3d;
   color: white;
-  height: 300px;
+  height: auto;
+  /* Adjusted for responsive height */
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  /* Added margin */
+  padding: 20px;
 }
-ul{
+
+ul {
   margin-top: 20px;
 }
-ul a{
+
+ul p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+ul a {
   display: block;
   font-size: 0.85rem;
-  margin-top: 10px;
+  margin-top: 5px;
   color: #dddddd;
+  text-decoration: none;
 }
-.foot_panel3{
+
+.foot_panel3 {
   background-color: #222f3d;
   border-top: 0.5px solid white;
   height: 70px;
@@ -231,18 +256,100 @@ ul a{
   justify-content: center;
   align-items: center;
 }
-.logo{
-  background-image: url("amazon_logo.png");
-  background-size: cover;
-  height: 50px;
-  width: 100px;
-}
 
-.foot_panel4{
+.foot_panel4 {
   background-color: #0f1111;
   color: white;
   text-align: center;
   height: 70px;
   padding-top: 30px;
   font-size: 0.85rem;
+}
+
+/* Responsive adjustments for mobile views */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav_search {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .panel {
+    display: none;
+    /*     flex-direction: column;
+    align-items: stretch;
+    padding: 10px; */
+    /* Add padding to avoid content sticking to edges */
+  }
+
+  .panel_option {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    /* Add gap between items */
+  }
+
+  .panel_option p {
+    margin: 0;
+    /* Remove margin for panel options */
+  }
+
+  .panel_deals {
+    width: 100%;
+    /* Ensure it takes full width */
+    margin: 10px 0;
+    /* Add margin for spacing */
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .shop_section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    max-width: 400px;
+    /* Ensure boxes don’t grow too large */
+  }
+
+  .hero-section {
+    display: none;
+    /* Hide hero section on mobile */
+  }
+
+  .hero_messege {
+    display: none;
+    /* Hide hero message on mobile */
+  }
+
+  .foot_panel2 {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    /* Align text to the left for better readability */
+    width: 100%;
+    /* Ensure foot_panel2 takes full width */
+  }
+
+  ul {
+    margin: 10px 0;
+  }
+
+  ul a {
+    font-size: 0.75rem;
+  }
+
+  .foot_panel4 {
+    padding-top: 15px;
+    font-size: 0.75rem;
+  }
 }
